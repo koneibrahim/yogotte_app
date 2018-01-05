@@ -15,7 +15,7 @@
 
 			/*----Debut  Production.php----*/
 
-	echo'<div id="content">';
+	echo'<div id="cont">';
 
 	$ligne=pg_fetch_assoc($production);
 

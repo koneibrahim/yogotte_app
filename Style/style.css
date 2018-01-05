@@ -18,6 +18,9 @@ body{background:#CDE9FF;font-family: URW Gothic L;}
 #content{position: absolute;background: rgba(67,169,255,0.2);right:0.5%;left:16.0%;bottom:6.0%;top:18.0%;
 	overflow: auto; border: 0px solid #4488C7;
 		}
+#cont{position: absolute;background: rgba(67,169,255,0.2);right:15.5%;left:16.0%;bottom:6.0%;top:18.0%;
+			overflow: auto; border: 0px solid #4488C7;
+				}
 
 #contleft{position: absolute;background: rgba(67,169,255,0.2);right:50.0%;left:0.5%;bottom:6.0%;top:18.0%;
 		overflow: auto;}

@@ -10,7 +10,7 @@
 	echo '</head>';
 	echo '<body>';
 
-	$dbconn=pg_connect("dbname=yogotte user=kone password=okokok host=localhost port=5432");
+	$dbconn=pg_connect("dbname=yogotterahma user=kone password=okokok host=localhost port=5432");
 
 	echo '<div id="header">';
 	echo '<h1 class="titreh1">LAITERIE YOGOTTE RAHMA</h1>';
