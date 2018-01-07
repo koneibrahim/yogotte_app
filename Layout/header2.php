@@ -11,6 +11,8 @@
 		echo ' <a href="/Src/Produits/produit.php"> <button class="bmh2">Produits</button> </a>';
 		echo ' <a href="/Src/Productions/liste.php"> <button class="bmh2">Productions</button> </a>';
 		echo ' <a href="/Src/Stocks/liste.php"> <button class="bmh2">Stocks</button> </a>';
+		echo ' <a href="/Src/Ventes/listeve.php"> <button class="bmh2">Ventes</button> </a>';
+
 		}
 
 		if($_SESSION['group']=='2') {
