@@ -85,7 +85,7 @@
 			'"><button class="butachat">Contenu</button></a></td>';
 	echo'</tr>';
 
-	if($ligne['etat']==1) {
+	if($ligne['etat']==0) {
 
 	echo'<tr>';
 
