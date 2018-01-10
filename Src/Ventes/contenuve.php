@@ -11,9 +11,7 @@
   echo'<div id="contvert2">';
   echo'<h3 class="titrecform textcen">Contenu de la vente de '.$libele.' '.$date_ve.' </h3><br/>';
     echo'<table cellpadding="3"  border="0" class="w90">';
-
       	//if ($etat==0) {
-
       	echo'<tr class="thajouter">';
           	echo'<th colspan="7" class="textdro thtable">
           	<a href="Vajouter.php?id_ve='.$id_ve.'">
@@ -39,9 +37,7 @@
             	echo'<td class="textcen">'.$ligne['qte_v'].'</td>';
             	echo'<td class="textcen">'.$ligne['prix'].'</td>';
               echo'<td class="textcen">'.$ligne['qte_liv'].'</td>';
-              
-// Modification le contenu de la vente
-
+              // Modification le contenu de la vente
       	//if ($etat==0) {
                echo'<td class="textcen"><a href="Vmodifier.php?id_cve='.$id_cve.
                    '&date_ve='.$ligne['date_ve'].
@@ -56,12 +52,9 @@
               // }
 
        echo'</tr>';
-
       	$i++;
-      	       }
+      	      }
     echo'</table>';
-
   echo'</div>';
       	include'../../Layout/footer.php';
-
 ?>

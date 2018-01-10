@@ -1,6 +1,5 @@
 <?php
 //-----COURS ACHAT
-
 if($_POST['mas']=='VA')
 	 {
 	$date_ve=$_POST['date_ve'];
@@ -10,8 +9,7 @@ if($_POST['mas']=='VA')
 	$requete.=" values ('$date_ve','$libele',$id_cli)";
 		if($_POST['valider']=='Valider')
 	$vajouter=pg_query($dbconn,$requete);
-}
-
+	}
 elseif($_POST['mas']=='VM')
 	 {
 	$id_ve=$_POST['id_ve'];
@@ -22,20 +20,18 @@ elseif($_POST['mas']=='VM')
 	$requete.=" where id_ve=$id_ve";
 			if($_POST['valider']=='Valider')
 	$vmodifier=pg_query($dbconn,$requete);
-
 	  }
-/*
-elseif($_POST['mas']=='AS')
+elseif($_POST['mas']=='VS')
 	 {
-	$id_ac=$_POST['id_ac'];
+	$id_ve=$_POST['id_ve'];
 	$valider=$_POST['valider'];
 	if($valider=='Oui') {
-	$requete="delete from achats where id_ac=$id_ac";
-	$asupprimer=pg_query($dbconn,$requete);
+	$requete="delete from ventes where id_ve=$id_ve";
+	$vsupprimer=pg_query($dbconn,$requete);
 	 }
 	 }
- }
 
+/*
 	 	  	 //-----VALIDATION--------------
 
 elseif($_POST['mas']=='V')
@@ -286,7 +282,7 @@ elseif($_POST['mas']=='PS')
 	    $vente=pg_query($dbconn,$requete2);
    $requete3="select id_cli,nom_cli from clients";
       $lclient=pg_query($dbconn,$requete3);
-			
+
 	 $requete4="select id_ve,id_cve,id_pro,nom_pro,prix,qte_v,qte_liv from
 			 contenu_ve natural join  ventes where id_ve=$id_ve";
 			$contenuve=pg_query($dbconn,$requete4);
@@ -296,4 +292,9 @@ elseif($_POST['mas']=='PS')
    $requete6="select id_pro,id_ve,id_cve,id_cliv,nom_pro,qte_pro,qte_liv,id_liv
 			 from contenu_liv_vente  join contenu_liv_vente using  (id_cve) join produits using(id_pro)  where id_liv=$id_liv order by nom_pro";
 			$livraison=pg_query($dbconn,$requete6);
+
+	 $requete7="select id_ve,id_pve,date_pve,libele,montant_pve from payvente where id_ve=$id_ve";
+	 	  $payement=pg_query($dbconn,$requete7);
+	 $requete8="select id_cli,nom_cli,tel,zone_liv from clients";
+		  $client=pg_query($dbconn,$requete8);
 ?>
