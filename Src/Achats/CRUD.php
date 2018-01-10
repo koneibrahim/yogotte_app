@@ -1,4 +1,5 @@
 <?php
+
 if($_SESSION['group']=='3'||$_SESSION['group']=='2') {
 	//------ACHAT-------
 
@@ -280,7 +281,5 @@ elseif($_POST['mas']=='PS')
 
 	 $requete11="select id_ac,libele,date_ac from achats where id_ac=$id_ac" ;
 	 $pachat=pg_query($dbconn,$requete11);
-
-
 
 ?>
