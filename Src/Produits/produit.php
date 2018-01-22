@@ -62,9 +62,8 @@
 			'&nom_pro='.$ligne['nom_pro'].
 			'&qte_pro='.$ligne['qte_pro'].
 			'"><img src="/Images/supprimer.png" width="25px"height="25px" class="img" title="Supprimer"></a></td>';
-
-
-	echo'<td class="textcen"><a href="composant.php?id_pro='.$ligne['id_pro'].
+ //-------- LIEN COMPOSANT--------
+ 	echo'<td class="textcen"><a href="composant.php?id_pro='.$ligne['id_pro'].
 						'&nom_pro='.$ligne['nom_pro'].
 						'&qte_pro='.$ligne['qte_pro'].
 						'"><button class="butmenu2"> Composant </button></a></td>';

@@ -14,7 +14,10 @@
       	//if ($etat==0) {
       	echo'<tr class="thajouter">';
           	echo'<th colspan="7" class="textdro thtable">
-          	<a href="Vajouter.php?id_ve='.$id_ve.'">
+          	<a href="CVajouter.php?id_ve='.$id_ve.
+            //'&id_cve='.$ligne['id_cve'].
+            '&date_ve='.$ligne['date_ve'].
+            '">
           	<img src="/Images/ajouter.png" width="25px"height="25px" title="Ajouter"></a></th>';
       	echo '</tr>';
       	//}

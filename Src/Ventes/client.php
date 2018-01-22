@@ -10,7 +10,7 @@
     	include'../../Layout/header2.php';
             	//include'CRUD.php';
               include'listevente.php';
-        echo'<div id="cont">';
+        echo'<div id="content">';
             	echo'<h3 class="titrecform textcen">Liste des clients</h3><br/>';
       	echo'<table cellpadding="3" border="0" class="w90">';
             	echo'<tr class="thajouter">';

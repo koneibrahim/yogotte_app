@@ -47,29 +47,31 @@ elseif($_POST['mas']=='V')
 elseif($etat=='1') {
 	 $requete12="update contenu_acha,matieres set qte_ma=qte_vir where id_ma=$id_ma" ;
 	 $echange=pg_query($dbconn,$requete12);
-	 	}
- 	 //-----CONTENU ACHAT-----------
+ } */
+ 	 //-----CONTENU VENTE-----------
 
- 	 if($_POST['mas']=='CA')
+ 	 if($_POST['mas']=='CVA')
 	 {
-	$id_ac=$_POST['id_ac'];
-	$id_ma=$_POST['id_ma'];
+	$id_ve=$_POST['id_ve'];
+	$id_cve=$_POST['id_cve'];
+	$id_pro=$_POST['id_pro'];
 	$libele=$_POST['libele'];
-	$qte_ma=$_POST['qte_ma'];
-	$rprix="select prix_ma from matieres where id_ma=$id_ma";
+	$qte_v=$_POST['qte_v'];
+	/*$rprix="select prix from produits where id_pro=$id_pro";
 	$eprix=pg_query($dbconn,$rprix);
 	$ligne=pg_fetch_assoc($eprix);
-	$prix_ma=$ligne['prix_ma'];
-	$requete="insert into contenu_acha (id_ma,qte_ma,id_ac,prix) values ($id_ma,$qte_ma,$id_ac,$prix_ma)";
+	$prix=$ligne['prix'];*/
+	$requete100="insert into contenu_ve (id_cve,id_pro,nom_pro,qte_v,prix) values ($id_cve,$id_pro,$nom_pro,$qte_v,$id_ve,$prix)";
+	$cvajouter=pg_query($dbconn,$requete100);
+	}
+/*
 		if($_POST['valider']=='Valider')
 		{
-			$cajouter=pg_query($dbconn,$requete);
-
-			$requete="update achats set montant= t.smontant from (select sum(prix*qte_ma) as smontant from
-			contenu_acha where id_ac=$id_ac) as t where id_ac=$id_ac";
-			$cajouter=pg_query($dbconn,$requete);
-
-			$requete="update matieres set qte_vir=qte_vir+$qte_ma where id_ma=$id_ma";
+			$cvajouter=pg_query($dbconn,$requete);
+	$requete="update ventes set montant= t.smontant from (select sum(prix*qte_ve) as smontant from
+				contenu_ve where id_ve=$id_ve) as t where id_ve=$id_ve";
+				$vcajouter=pg_query($dbconn,$requete);
+	$requete="update produits set qte_vir=qte_vir+$qte_ma where id_ma=$id_ma";
 	 	   $resultat=pg_query($dbconn,$requete);
 
 		}
@@ -280,21 +282,25 @@ elseif($_POST['mas']=='PS')
    $requete2="select id_ve,id_cli,date_ve,libele,nom_cli,montant,montant_paye,montant_res,etat from
 	             ventes natural join clients where id_ve=$id_ve";
 	    $vente=pg_query($dbconn,$requete2);
-   $requete3="select id_cli,nom_cli from clients";
+   $requete3="select id_cli,nom_cli,adresse_cli from clients";
       $lclient=pg_query($dbconn,$requete3);
 
-	 $requete4="select id_ve,id_cve,id_pro,nom_pro,prix,qte_v,qte_liv from
-			 contenu_ve natural join  ventes where id_ve=$id_ve";
+	 $requete4="select id_cve,id_ve,id_pro,nom_pro,prix,qte_v,qte_liv from
+ 							contenu_ve natural join produits  where id_ve=$id_ve";
 			$contenuve=pg_query($dbconn,$requete4);
 
    $requete5="select id_liv,id_ve,date_liv,libele from liv_vente";
 			$lvente=pg_query($dbconn,$requete5);
+
    $requete6="select id_pro,id_ve,id_cve,id_cliv,nom_pro,qte_pro,qte_liv,id_liv
 			 from contenu_liv_vente  join contenu_liv_vente using  (id_cve) join produits using(id_pro)  where id_liv=$id_liv order by nom_pro";
 			$livraison=pg_query($dbconn,$requete6);
 
 	 $requete7="select id_ve,id_pve,date_pve,libele,montant_pve from payvente where id_ve=$id_ve";
 	 	  $payement=pg_query($dbconn,$requete7);
-	 $requete8="select id_cli,nom_cli,tel,zone_liv from clients";
+	 $requete8="select id_cli,nom_cli,tel,adresse_cli zone_liv from clients";
 		  $client=pg_query($dbconn,$requete8);
+	 $requete9="select id_pro,prix,nom_pro from produits" ;
+	 	  $lproduit=pg_query($dbconn,$requete9);
+
 ?>

@@ -1,5 +1,5 @@
 
-body{background:#CDE9FF;font-family: URW Gothic L;}
+body{background:#CDE9FF;font-family: Garuda;}
 
 /* -----------Layout----------*/
 
@@ -9,7 +9,7 @@ body{background:#CDE9FF;font-family: URW Gothic L;}
 #header2{position: absolute;background: rgba(67,169,255,0.2);height: 8.0%;top: 9.0%;right: 16.0%;left: 16.0%;
 	text-align: center;
 	   	}
-#menu1{position: absolute;background: rgba(67,169,255,0.2);top: 9.0%;bottom: 6.0%;right: 0.5%;width: 15.0%;
+#menu1{position: absolute;background: rgba(67,169,255,0.2);top: 17.5%;bottom: 6.0%;right: 0.5%;width: 15.0%;
 	text-align: center;
 		}
 #menu2{position: absolute;background: rgba(67,169,255,0.2);top:9.0%;left: 0.5%;width: 15.0%;bottom: 6.0%;

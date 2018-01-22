@@ -6,18 +6,23 @@
 		 	echo'<img src="../../Images/sahel.png" width="100%" height="100%" alt="">';
 	  echo '</div>';
 		echo '<div id="logoyogo">';
-		 	echo'<img src="../../Images/yogotte.jpg" width="100%" height="100%" alt="">';
+		 	 echo'<img src="../../Images/ventes.png" width="100%" height="100%" alt="">';
 		echo '</div>';
 	   include'../../Layout/header2.php';
-     echo'<div id="menu1">';
-       echo ' <a href="/Src/Ventes/client.php"> <button class="butachat">Clients</button> </a>';
-       echo ' <a href="/Src/Ventes/stockve.php"> <button class="butachat">Stocks ventes</button> </a>';
+     echo'<div id="menu2">';
+
      echo '</div>';
 	    include 'CRUD.php';
 
 	     echo'<div id="menu2">';
-		 	   echo'<img src="../../Images/ventes.png" width="60%" height="20%" alt="">';
-          	echo'<a href="Vajouter.php">
+       echo'<br>';
+       echo ' <a href="/Src/Ventes/client.php"> <button class="butmenu2">Clients</button> </a>';
+       echo ' <a href="/Src/Ventes/stock.php"> <button class="butmenu2">Stocks</button> </a>';
+
+       echo'<br>';
+       echo'<br>';
+
+		 	       echo'<a href="Vajouter.php">
           	<img src="/Images/ajouter.png" width="25px"height="25px"
           	class="img" title="Ajouter"></a></th>';
           	echo '<h4 class="titreh4"> Liste des ventes </h4><br/>';

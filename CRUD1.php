@@ -10,12 +10,14 @@ if($_POST['amd']=='AU') {
 	$user=pg_fetch_assoc($resultat);
 	if ($user['password']==md5($password)) {
      $_SESSION['utilisateur']='Identifie';
+
 		 //----Declaration du group_users-----------
 		 $_SESSION['group']=$user['id_g'];
 
-		 	  echo '<div id="footer">';
+		 	 /* echo '<div id="footer">';
     			echo 'Bienvenue dans votre compte';
-				echo'</div>';
+				echo'</div>';*/
+
      $_SESSION['erreur']=' ';
         }
 }

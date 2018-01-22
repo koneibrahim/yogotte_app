@@ -1,5 +1,4 @@
 <?php
-
 if($_SESSION['group']=='3'||$_SESSION['group']=='2') {
 	//------ACHAT-------
 
@@ -36,7 +35,6 @@ elseif($_POST['mas']=='AS')
 	$asupprimer=pg_query($dbconn,$requete);
 	 }
 	 }
- }
 
 	 	  	 //-----VALIDATION--------------
 
@@ -269,7 +267,7 @@ elseif($_POST['mas']=='PS')
 	 $requete7="select id_fo,nom_fo from fournisseurs";
 	 $lfournisseur=pg_query($dbconn,$requete7);
 
-        $requete8="select id_ac,id_pay,date_pay,libele,montant from payements where id_ac=$id_ac";
+   $requete8="select id_ac,id_pay,date_pay,libele,montant from payements where id_ac=$id_ac";
 	 $payement=pg_query($dbconn,$requete8);
 
 	 $requete9="select id_ac,id_liv,date_liv,libele from livraisons where id_ac=$id_ac";
@@ -281,5 +279,5 @@ elseif($_POST['mas']=='PS')
 
 	 $requete11="select id_ac,libele,date_ac from achats where id_ac=$id_ac" ;
 	 $pachat=pg_query($dbconn,$requete11);
-
+}
 ?>
