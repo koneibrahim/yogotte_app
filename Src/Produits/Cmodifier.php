@@ -15,8 +15,8 @@
 						  echo'<input type="hidden" name="id_pro" value="'.$id_pro.'">';
 							echo'<input type="hidden" name="nom_pro" value="'.$nom_pro.'">';
 							echo'<table cellpadding="3" class="w95">';
-									echo'<tr><td class="textinput">Nom composant</td><td>
-										  <input type="text" name="nom_ma" value="'.$nom_ma.'" class="labinput"></td></tr>';
+								echo'<tr><td class="textinput">Nom composant</td><td>
+										 <input type="text" name="nom_ma" value="'.$nom_ma.'" class="labinput"></td></tr>';
 									echo'<tr><td class="textinput">Quantité</td><td>
 										  <input type="text" name="qte_compo" value="'.$qte_compo.'" class="labinput"></td></tr>';
 							echo'</table>';

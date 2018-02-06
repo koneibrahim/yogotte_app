@@ -66,11 +66,13 @@
         			echo'<td class="textcen"><a href="../html2pdf_v4.03/examples/exemple03.php?id_ac='.$id_ac.'">
         			<img src="/Images/imprim.png" width="35px"height="35px" class="img" title="Imprimé"></a>';
 
-        			if($ligne['etat']==0) {
+        			//if($ligne['etat']==0) {
+              if($_SESSION['group']=='3') {
           			echo'<a href="Asupprimer.php?id_ac='.$ligne['id_ac'].
           			'&date_ac='.$ligne['date_ac'].'&libele='.$ligne['libele'].'">
           			<img src="/Images/supprimer.png" width="25px"height="25px" class="img" title="Supprimer"></a></td>';
-          			 }
+          		//	 }
+            }
         	echo'</tr>';
 
         	echo'<tr>';

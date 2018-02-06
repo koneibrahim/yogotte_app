@@ -27,8 +27,7 @@ elseif($_POST['mas']=='S'){
 	$resultat=pg_query($dbconn,$requete);
 	 }
 	}
-
- // REQUÊTE COMPOSANTE
+ // ----COMPOSANT-----------
 if($_POST['mas']=='CA') {
 	$id_ma=$_POST['id_ma'];
 	$id_pro=$_POST['id_pro'];

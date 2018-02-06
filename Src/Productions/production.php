@@ -9,13 +9,11 @@
  	$id_cprod=$_GET['id_cprod'];
  	 $etat=$_GET['etat'];
 
-
-
 	include 'liste.php';
 
 			/*----Debut  Production.php----*/
 
-	echo'<div id="cont">';
+	echo'<div id="content">';
 
 	$ligne=pg_fetch_assoc($production);
 
@@ -38,31 +36,33 @@
 	echo '</tr>';
 
 		if($ligne['etat']==0) {
-
 	echo'<tr  class="ligne">';
-	echo'<td  class="textgau"><a href="Fmodifier.php?id_prod='.$ligne['id_prod'].
-			'&date_prod='.$ligne['date_prod'].
-			'&libele='.$ligne['libele'].
-			'&qte='.$ligne['qte'].
-			'&etat='.$ligne['etat'].
-			'"><img src="/Images/modifier.png" width="25px"height="25px" class="img" title="Modifier"></a>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-	<a href="Fsupprimer.php?id_prod='.$ligne['id_prod'].
-			'&date_prod='.$ligne['date_prod'].
-			'&libele='.$ligne['libele'].
-			'&qte='.$ligne['qte'].
-
-			'"><img src="/Images/supprimer.png" width="25px"height="25px" class="img"title="Supprimer"></td></a>';
-
-	echo'<td><a href="valider.php?id_prod='.$ligne['id_prod'].
+  echo'<td><a href="valider.php?id_prod='.$ligne['id_prod'].
 			'&date_prod='.$ligne['date_prod'].
 			'&libele='.$ligne['libele'].
 			'&qte='.$ligne['qte'].
 				'&etat='.$ligne['etat'].
 			'"><img src="/Images/valider.png" width="25px"height="25px" class="img" title="Valider"></a></td>';
 
+	    echo'<td  class="textgau"><a href="Fmodifier.php?id_prod='.$ligne['id_prod'].
+			'&date_prod='.$ligne['date_prod'].
+			'&libele='.$ligne['libele'].
+			'&qte='.$ligne['qte'].
+			'&etat='.$ligne['etat'].
+			'"><img src="/Images/modifier.png" width="25px"height="25px" class="img" title="Modifier"></a></td>';
+      //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+    }
+      if($_SESSION['group']=='3') {
+      echo'<td><a href="Fsupprimer.php?id_prod='.$ligne['id_prod'].
+			'&date_prod='.$ligne['date_prod'].
+			'&libele='.$ligne['libele'].
+			'&qte='.$ligne['qte'].
+			'"><img src="/Images/supprimer.png" width="25px"height="25px" class="img"title="Supprimer"></a></td>';
+    }
+
+
 	echo'</tr>';
-		}
+
 			echo'</table>';
 
 				/*-----Contenu Production----*/
