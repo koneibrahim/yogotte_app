@@ -12,8 +12,7 @@
 			echo'	<form action="liste.php" method="post">';
 		        	echo'<input type="hidden" name="mas" value="LM"/>';
 		        	echo'<input type="hidden" name="id_cli" value="'.$id_cli.'">';
-				  		echo'<input type="hidden" name="nom_cli" value="'.$nom_cli.'">';
-        		echo'<table cellpadding="5" class="w95">';
+        		  echo'<table cellpadding="5" class="w95">';
 							   	echo'<tr><td class="textinput">Nom client</td><td>
 				        		  <input type="text" name="nom_cli" value="'.$nom_cli.'" class="labinput"></td></tr>';
 				        	echo'<tr><td class="textinput">Téléphone</td><td>
